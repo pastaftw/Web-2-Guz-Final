@@ -4,24 +4,20 @@ import './App.css';
 
 //Importing Handlers Module
 import Settings from '../main/Settings';
-import {Use_API} from "../main/Handlers"
+import {Use_API, Use_API_and_Find} from "../main/Handlers"
 import People_List from './People_List';
 import Searchbox from './Searchbox';
 import Root_Changer from './Root_Changer';
 
 function App() {
   //Hooks 
-  const [current_page, set_current_page] = useState("people");
+  const [current_page, set_current_page] = useState(Settings.Default_Page);
   const [current_array, set_current_array] = useState([]);
  
-  //Preparing Page
-  useEffect(() => {
-    Use_API(current_page)
-    .then((page_val) => {
-      set_current_array(page_val.results)
-    })
-  }, [current_page])
+  //useEffects (Handler Module Keeps Code Clean :-))
+  useEffect(() => {Use_API(current_page, set_current_array)}, [current_page])
 
+  //Pages
   if (current_array.length <= 0) {
     return (<h1> Yükleniyor... </h1>)
   }
