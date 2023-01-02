@@ -1,9 +1,10 @@
 const People_Card = (props) => {
-    const {name} = props
+    const {name, height} = props.object
     
     return (
-        <div>
-            {name}
+        <div className = "People_Card">
+            <h2> {name} </h2>
+            {"Boy: " + height}
         </div>
     )
 }

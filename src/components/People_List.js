@@ -1,21 +1,21 @@
 import People_Card from "./People_Card";
-let key_index = 0;
 
 const People_List = (props) => {
-    const filtered_array = props.array.map((element) => {
+    const filtered_array = props.array.map((element, element_index) => {
         return (
             <People_Card 
-            key = {key_index++} 
-            name = {element.name}
+            key = {element_index} 
+            object = {element}
             />
         );
     })
 
     return(
-        <div>
+        <div className = "People_List">
             {filtered_array}
         </div>
     )
-}
+} 
+
 
 export default People_List;

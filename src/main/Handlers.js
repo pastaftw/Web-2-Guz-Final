@@ -13,8 +13,11 @@ const API_Handler = async (link) => {
 
 //Fetching API With Secondary Root Name
 const Use_API = async (root_name) => {
-    const result = await API_Handler(Settings.Base_API_Root + "/" + root_name)
-    return result.results;
+    return await API_Handler(Settings.Base_API_Root + "/" + root_name);
 }
 
-export {Use_API}
+const Handle_Click = (sender, func) => {
+    func(sender.target.value)
+}
+
+export {Use_API, Handle_Click}
