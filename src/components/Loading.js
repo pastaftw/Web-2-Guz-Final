@@ -1,6 +1,6 @@
 const Loading = (props) => {
     return(
-        <h1>Yükleniyor</h1>
+        <h1>Yükleniyor...</h1>
     )
 }
 

@@ -88,8 +88,8 @@ const Handle_Loading = (is_loading) => {
 
 //Exporting Functions
 export {
-    API_Handler,
     Use_API,
+    API_Handler,
     Handle_Click,
     Handle_Search_Change,
     Handle_Filtering,

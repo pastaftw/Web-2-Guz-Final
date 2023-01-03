@@ -1,9 +1,7 @@
 import Settings from "../main/Settings"
 
 const Card_Format = (props) => {
-    const current_page = props.current_page
-    const object = props.object
-    console.log(current_page)
+    const {current_page, object} = props
 
     if (current_page == Settings.API_Roots[0]) {
         const {name, 
