@@ -1,4 +1,4 @@
-const People_Card = (props) => {
+const Card_Format = (props) => {
     const {name, height} = props.object
     
     return (
@@ -9,4 +9,4 @@ const People_Card = (props) => {
     )
 }
 
-export default People_Card
+export default Card_Format

@@ -1,9 +1,9 @@
-import People_Card from "./People_Card";
+import Card_Format from "./Card_Format";
 
 const People_List = (props) => {
     const filtered_array = props.array.map((element, element_index) => {
         return (
-            <People_Card 
+            <Card_Format 
             key = {element_index} 
             object = {element}
             />

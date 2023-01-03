@@ -11,7 +11,7 @@ const Root_Changer = (props) => {
             value = {element} 
             onClick = {
                 (sender) => {
-                    console.log("clicked=?");
+                    console.log("Page Changed!");
                     Handle_Click(sender, appended_function);
                 }
             }> 
