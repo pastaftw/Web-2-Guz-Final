@@ -5,13 +5,14 @@ const People_List = (props) => {
         return (
             <Card_Format 
             key = {element_index} 
+            current_page = {props.current_page}
             object = {element}
             />
         );
     })
 
     return(
-        <div className = "People_List">
+        <div className = "Card_List">
             {filtered_array}
         </div>
     )

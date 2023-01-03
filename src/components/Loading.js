@@ -1,6 +1,6 @@
-const Loading = () => {
+const Loading = (props) => {
     return(
-        <h1>BEKLEEE LAOOOOOOOOOOOOOOOOOOOOO</h1>
+        <h1>Yükleniyor</h1>
     )
 }
 

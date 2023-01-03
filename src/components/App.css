@@ -1,15 +1,33 @@
-.People_Card {
-    margin: 10px;
+.Card_Format {
+    margin: .8em;
     padding: 10px;
-    flex-basis: 21.5%;
-    height: 200px;
-    background-color: lightblue;
+    flex-basis: 22%;
+    flex-grow: 1;
+    border-radius: 15px;
+    background-color: darkgoldenrod;
 }
 
-.People_List {
+.Card_List {
     display: flex;
+    width: 100%;
+    padding: 2em;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: gray;
+}
+
+.Root_Changer_Main {
+    display: flex;
+    justify-content: center;
+}
+
+.Searchbox{
+    display: flex;
+    margin: auto;
+}
+
+.Main_Div > h1 {
+    text-align: center;
+    font-size: 60px;
+    color: orange;
 }
