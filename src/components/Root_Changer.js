@@ -4,6 +4,7 @@ import {Handle_Click} from "../main/Handlers";
 const Root_Changer = (props) => {
     const {appended_function, selected} = props
     const results = Settings.API_Roots.map((element, index) => {
+        //Selected Root Design
         if (element === selected) {
             return (
                 <button 
@@ -16,6 +17,8 @@ const Root_Changer = (props) => {
                 </button>
             )
         }
+
+        //Common Root Design
         return (
             <button 
             key = {index} 
@@ -27,7 +30,12 @@ const Root_Changer = (props) => {
         )
     })
 
-    return (<div className = "Root_Changer_Main"> {results} </div>)
+    //Final
+    return (
+        <div className = "Root_Changer_Main"> 
+        {results} 
+        </div>
+    )
 }
 
 export default Root_Changer;

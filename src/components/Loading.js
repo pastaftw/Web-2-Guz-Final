@@ -1,4 +1,4 @@
-const Loading = (props) => {
+const Loading = () => {
     return(
         <h1 className = "Loading">Loading...</h1>
     )

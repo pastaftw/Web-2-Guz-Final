@@ -1,7 +1,7 @@
 import Card_Format from "./Card_Format";
 
 const Card_List = (props) => {
-    const filtered_array = props.array.map((element, element_index) => {
+    const cards = props.array.map((element, element_index) => {
         return (
             <Card_Format 
             key = {element_index} 
@@ -13,7 +13,7 @@ const Card_List = (props) => {
 
     return(
         <div className = "Card_List">
-            {filtered_array}
+            {cards}
         </div>
     )
 } 

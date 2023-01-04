@@ -50,33 +50,49 @@
     display: flex;
     justify-content: center;
 }
-
 .Root_Changer_Selected {
-    border: 2px outset var(--Secondary_Trans);
+    color: white !important;
+    outline: 1px outset var(--Secondary_Trans) !important;
     background-color: var(--Main_Color) !important;
 }
-
 .Root_Changer_Main button{
-    width: 120px;
+    text-transform:capitalize;
+    width: 125px;
     height: 50px;
     margin: 2px 5px;
     border-radius: 15px;
     padding: 10px;
+    color: black;
+    font-size: 18px;
     border: 2px outset var(--Main_Trans);
     background-color: var(--Secondary_Color);
 }
 
+::placeholder{
+    text-align: center;
+    opacity: .15;
+    font-size: 20px;
+    color: black;
+}
+
 .Searchbox{
-    margin: 30px auto;
-    padding: 20px;
+    margin: 32px auto;
+    padding: 18px;
     width: 260px;
-    height: 2.5em;
+    height: 2.6em;
     display: flex;
     text-align: center;
+    transition: .5s;
     border-radius: 15px;
+    font-size: 18px;
     border: 2px outset var(--Main_Trans);
     color: black;
     background-color: var(--Secondary_Color);
+}
+
+.Searchbox:focus {
+    outline: 1px outset var(--Secondary_Trans);
+    background-color: orange;
 }
 
 .Main_Div {
@@ -105,3 +121,36 @@
 }
 
 
+@media screen and (max-width: 700px) {
+    .Card_Format {
+        border: hidden;
+        margin: 0 0 20px 0;
+        border-radius: 0;
+    }
+    .Top_Side hr {
+        width: 300px;
+        border-radius: 0;
+    }
+    .Searchbox{
+        border-radius: 0;
+    }
+    .Root_Changer_Main {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Root_Changer_Main button {
+        margin: 0px;
+        width: 100%;
+        border-radius: 0;
+    }
+    .Card_Format:hover{
+        border: hidden;
+    }
+    .Card_List {
+        margin-top: 20px;
+        padding: 0;
+        flex-direction: column;
+    }
+}

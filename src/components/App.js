@@ -36,6 +36,7 @@ import {
     return(
       <main className = "Main_Div">
           <Top_Side title = {Settings.Default_Title}/>
+          <Searchbox appended_function = {set_current_search}/>
           <Loading/>
       </main>
     )

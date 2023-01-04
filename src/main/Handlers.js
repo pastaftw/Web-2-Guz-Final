@@ -91,6 +91,7 @@ const Handle_Loading = (is_loading) => {
     if (is_loading) {return true;}
     return false;
 }
+
 //Handling Clicks With An Appended Function
 const Handle_Click = (sender, appended_function) => {
     Appended_Function_Handler(appended_function, sender.target.value);
@@ -104,7 +105,7 @@ const Handle_Search_Change = (value, appended_function) => {
 //Exporting Functions
 export {
     Use_API,
-    API_Handler,
+    API_Handler, //Exported Incase I Might Use
     Handle_Click,
     Handle_Search_Change,
     Handle_Filtering,

@@ -3,12 +3,12 @@ const Settings = {
     Base_API_Root: "https://swapi.dev/api",
 
     API_Roots: [
-        "people", 
-        "planets", 
-        "films", 
-        "species", 
-        "vehicles", 
-        "starships"
+        "people", //0
+        "planets", //1
+        "films", //2
+        "species", //3
+        "vehicles", //4
+        "starships",//5
     ],
     
     Default_Page: "films",
