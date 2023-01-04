@@ -37,6 +37,7 @@ import {
       <main className = "Main_Div">
           <Top_Side title = {Settings.Default_Title}/>
           <Searchbox appended_function = {set_current_search}/>
+          <Root_Changer appended_function = {set_current_page} selected = {current_page}/>
           <Loading/>
       </main>
     )
