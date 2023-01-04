@@ -1,6 +1,6 @@
 import Card_Format from "./Card_Format";
 
-const People_List = (props) => {
+const Card_List = (props) => {
     const filtered_array = props.array.map((element, element_index) => {
         return (
             <Card_Format 
@@ -19,4 +19,4 @@ const People_List = (props) => {
 } 
 
 
-export default People_List;
+export default Card_List;

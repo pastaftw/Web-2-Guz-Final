@@ -1,18 +1,48 @@
+/*Common Values*/
+:root{
+    --Main_Color: orange;
+    --Secondary_Color: rgb(186, 121, 0);
+
+    --Main_Trans: rgba(255, 255, 255, 0.3);
+    --Secondary_Trans: rgba(255, 255, 255, 0.8);
+}
+
 .Card_Format {
+    flex: 0 1 25%;
     margin: .8em;
     padding: 10px;
-    flex-basis: 22%;
-    flex-grow: 1;
+    transition: .5s;
     border-radius: 15px;
-    background-color: darkgoldenrod;
+    height: inherit;
+    border: 2px outset var(--Main_Trans);
+    background-color: var(--Secondary_Color);
+}
+.Card_Format > h2 {
+    letter-spacing: 0.15rem;
+    font-style: italic;
+    text-align: center;
+    font-size: 26px;
+    color: white;
+}
+.Card_Format > p {
+    margin-bottom: 5px;
+    letter-spacing: .05rem;
+    font-size: 1.2rem;
+    text-align: center;
+    color:black;
+}
+.Card_Format:hover{
+    border: 2px outset var(--Secondary_Trans);
+    background-color: var(--Main_Color);
 }
 
 .Card_List {
     display: flex;
     width: 100%;
     padding: 2em;
-    justify-content: center;
-    align-items: center;
+    flex-basis: 1;
+    justify-content: space-around;
+    align-items: stretch;
     flex-wrap: wrap;
 }
 
@@ -21,13 +51,57 @@
     justify-content: center;
 }
 
-.Searchbox{
-    display: flex;
-    margin: auto;
+.Root_Changer_Selected {
+    border: 2px outset var(--Secondary_Trans);
+    background-color: var(--Main_Color) !important;
 }
 
-.Main_Div > h1 {
+.Root_Changer_Main button{
+    width: 120px;
+    height: 50px;
+    margin: 2px 5px;
+    border-radius: 15px;
+    padding: 10px;
+    border: 2px outset var(--Main_Trans);
+    background-color: var(--Secondary_Color);
+}
+
+.Searchbox{
+    margin: 30px auto;
+    padding: 20px;
+    width: 260px;
+    height: 2.5em;
+    display: flex;
+    text-align: center;
+    border-radius: 15px;
+    border: 2px outset var(--Main_Trans);
+    color: black;
+    background-color: var(--Secondary_Color);
+}
+
+.Main_Div {
+    margin: auto;
+    max-width: 1300px;
+}
+
+.Top_Side h1 {
+    margin: 50px 10px 10px 10px;
     text-align: center;
     font-size: 60px;
-    color: orange;
+    color: var(--Main_Color);
 }
+
+.Top_Side hr {
+    width: 390px;
+    border-radius: 15px;
+    background-color: var(--Main_Color);
+    border: 2px solid var(--Main_Color);
+}
+
+.Loading {
+    color: var(--Main_Color);
+    text-align: center;
+    font-size: 60px;
+}
+
+

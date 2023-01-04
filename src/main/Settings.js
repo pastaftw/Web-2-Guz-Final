@@ -11,7 +11,8 @@ const Settings = {
         "starships"
     ],
     
-    Default_Page: "people",
+    Default_Page: "films",
+    Default_Title: "STARWARS INFO",
 }
 
 export default Settings;

@@ -1,4 +1,6 @@
+/*Google Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap');
+
 
 * {
     box-sizing: border-box;
@@ -6,10 +8,11 @@
 }
 
 html {
-    background-color: black;
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgb(62, 43, 1) 10%, rgb(102, 76, 42) 40%, rgba(0,0,0,1) 100%);
 }
 
 body {
     margin: 0;
     padding: 0;
 }
+
