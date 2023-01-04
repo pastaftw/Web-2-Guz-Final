@@ -27,7 +27,7 @@ import {
 
   //useEffects (Handler Module Keeps Code Clean :-))
   useEffect(() => {Use_API(Settings.Base_API_Root + "/" + current_page, [set_current_array, set_is_loading])}, [current_page])
-  useEffect(() => {Handle_Filtering([current_array, current_search], set_filtered_array)}, [current_search, current_array])
+  useEffect(() => {Handle_Filtering([current_array, current_page, current_search], set_filtered_array)}, [current_search, current_array])
 
   // [Pages]
   

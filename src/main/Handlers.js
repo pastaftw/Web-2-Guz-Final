@@ -66,25 +66,9 @@ const Use_API = async (url, appended_functions, last_results = []) => {
     }
 }
 
-//Handling Clicks With An Appended Function
-const Handle_Click = (sender, appended_function) => {
-    Appended_Function_Handler(appended_function, sender.target.value);
-}
-
-//Handling Search Change With An Appended Function
-const Handle_Search_Change = (value, appended_function) => {
-    Appended_Function_Handler(appended_function, value)
-}
-
 //Handling Filtering
 const Handle_Filtering_BG = (array, search_as, search_val) => {
-    console.log("FIRED:", array, search_as, search_val)
-
-    if (array.length === 0) {
-        console.log("no array!")
-        return array;
-    }
-    else if (search_val.trim() === '') {
+    if (array.length === 0 || search_val.trim() === '') {
         return array;
     }
     return array.filter((element) => {
@@ -97,10 +81,8 @@ const Handle_Filtering_BG = (array, search_as, search_val) => {
 
 //Handling Search With An Appended Function
 const Handle_Filtering = (search_vals, appended_function) => {
-    let search_as = "name";
-    if (search_vals[0][search_as] === undefined) {search_as = "title"}
-
-    const search_results = Handle_Filtering_BG(search_vals[0], search_as, search_vals[1])
+    let search_val = search_vals[1] === "films" ? "title" : "name";
+    const search_results = Handle_Filtering_BG(search_vals[0], search_val, search_vals[2])
     Appended_Function_Handler(appended_function, search_results)
 }
 
@@ -108,6 +90,15 @@ const Handle_Filtering = (search_vals, appended_function) => {
 const Handle_Loading = (is_loading) => {
     if (is_loading) {return true;}
     return false;
+}
+//Handling Clicks With An Appended Function
+const Handle_Click = (sender, appended_function) => {
+    Appended_Function_Handler(appended_function, sender.target.value);
+}
+
+//Handling Search Change With An Appended Function
+const Handle_Search_Change = (value, appended_function) => {
+    Appended_Function_Handler(appended_function, value)
 }
 
 //Exporting Functions
